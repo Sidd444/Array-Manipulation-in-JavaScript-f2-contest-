@@ -39,18 +39,21 @@ const data = [
   function averageAge() {
     let ans= 0;
     for(let i=0;i<data.length;i++) ans+=data[i].age;
-    console.log("Average Age in the array is --> "+ans/data.length);
+    console.log("Average Age in the array is --> "+Math.floor(ans/data.length));
   }
   
   // 6. Age Check
   function checkAgeAbove25() {
+    let ab=false;
     for(let i=0;i<data.length;i++){
       if(data[i].age>25){
            console.log("age above 25 exists")
            console.log(data[i]);
+           ab=true;
            break;
       }
   }
+  if(!ab) console.log("Age above 25 does not exists");
   }
   
   // 7. Unique Professions
@@ -69,7 +72,7 @@ const data = [
   // 8. Sort by Age
   function sortByAge() {
     data.sort((a,b)=>a.age-b.age);
-    console.log("Sorted array")
+    console.log("Array has been sorted according to age")
       console.log(data);
   }
   
